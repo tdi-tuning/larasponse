@@ -8,7 +8,7 @@ Add **Larasponse** to your composer.json file:
 
 ```json
 "require": {
-    "sorskod/larasponse": "~1.0"
+    "sorskod/larasponse": "dev-L5"
 }
 ```
 
@@ -16,7 +16,7 @@ and run `composer update sorskod/larasponse`
 
 ### Registering the Package
 
-Register the service provider within the `providers` array found in `app/config/app.php`:
+Register the service provider within the `providers` array found in `config/app.php`:
 
 ```php
 'providers' => array(

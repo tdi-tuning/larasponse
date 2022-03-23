@@ -1,20 +1,18 @@
 <?php  namespace Sorskod\Larasponse;
 
-use Illuminate\Pagination\Paginator;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 interface Larasponse
 {
 
     /**
      * @param $includes
-     * @internal param $connection
-     * @return mixed
      */
     public function parseIncludes($includes);
 
     /**
      * @param mixed $data
-     * @param \League\Fractal\TransformerAbstract|callable $transformer
+     * @param \League\Fractal\TransformerAbstract|\Closure $transformer
      * @param string $resourceKey
      * @return array
      */
@@ -22,17 +20,17 @@ interface Larasponse
 
     /**
      * @param $data
-     * @param \League\Fractal\TransformerAbstract|callable $transformer
+     * @param \League\Fractal\TransformerAbstract|\Closure $transformer
      * @param string $resourceKey
      * @return array
      */
     public function collection($data, $transformer = null, $resourceKey = null);
 
     /**
-     * @param Paginator $paginator
-     * @param \League\Fractal\TransformerAbstract|callable $transformer
+     * @param LengthAwarePaginator $paginator
+     * @param \League\Fractal\TransformerAbstract|\Closure $transformer
      * @param string $resourceKey
      * @return mixed
      */
-    public function paginatedCollection(Paginator $paginator, $transformer = null, $resourceKey = null);
+    public function paginatedCollection(LengthAwarePaginator $paginator, $transformer = null, $resourceKey = null);
 }
