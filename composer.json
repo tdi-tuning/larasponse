@@ -9,9 +9,9 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "~8.0",
-        "illuminate/pagination": "~8.0",
-        "illuminate/http": "~8.0",
+        "illuminate/support": "~9.0",
+        "illuminate/pagination": "~9.0",
+        "illuminate/http": "~9.0",
         "league/fractal": "~0.11"
     },
     "require-dev": {
